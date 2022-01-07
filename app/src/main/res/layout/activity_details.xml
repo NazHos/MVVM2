@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.DetailsActivity">
+
+    <TextView
+        android:id="@+id/sizeHeaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Size: "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/sizeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Size: "
+        app:layout_constraintTop_toTopOf="@id/sizeHeaderTV"
+        app:layout_constraintStart_toEndOf="@id/sizeHeaderTV"/>
+
+    <TextView
+        android:id="@+id/starGazerHeaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Stargazers Count: "
+        app:layout_constraintTop_toBottomOf="@id/sizeHeaderTV"
+        app:layout_constraintStart_toStartOf="@id/sizeHeaderTV"/>
+
+    <TextView
+        android:id="@+id/starGazerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Stargazers Count: "
+        app:layout_constraintTop_toTopOf="@id/starGazerHeaderTV"
+        app:layout_constraintStart_toEndOf="@id/starGazerHeaderTV"/>
+
+    <TextView
+        android:id="@+id/watcherHeaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Watchers Count: "
+        app:layout_constraintTop_toBottomOf="@id/starGazerHeaderTV"
+        app:layout_constraintStart_toStartOf="@id/starGazerHeaderTV"/>
+
+    <TextView
+        android:id="@+id/watcherTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Watchers Count: "
+        app:layout_constraintTop_toTopOf="@id/watcherHeaderTV"
+        app:layout_constraintStart_toEndOf="@id/watcherHeaderTV"/>
+
+    <TextView
+        android:id="@+id/issuesHeaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Issues: "
+        app:layout_constraintTop_toBottomOf="@id/watcherHeaderTV"
+        app:layout_constraintStart_toStartOf="@id/watcherHeaderTV"/>
+
+    <TextView
+        android:id="@+id/issuesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Issues: "
+        app:layout_constraintTop_toTopOf="@id/issuesHeaderTV"
+        app:layout_constraintStart_toEndOf="@id/issuesHeaderTV"/>
+
+    <TextView
+        android:id="@+id/projectsHeaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Projects: "
+        app:layout_constraintTop_toBottomOf="@id/issuesHeaderTV"
+        app:layout_constraintStart_toStartOf="@id/issuesHeaderTV"/>
+
+    <TextView
+        android:id="@+id/projectsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Projects: "
+        app:layout_constraintTop_toTopOf="@id/projectsHeaderTV"
+        app:layout_constraintStart_toEndOf="@id/projectsHeaderTV"/>
+
+    <TextView
+        android:id="@+id/downloadsHeaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Downloads: "
+        app:layout_constraintTop_toBottomOf="@id/projectsHeaderTV"
+        app:layout_constraintStart_toStartOf="@id/projectsHeaderTV"/>
+
+    <TextView
+        android:id="@+id/downloadsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Downloads: "
+        app:layout_constraintTop_toTopOf="@id/downloadsHeaderTV"
+        app:layout_constraintStart_toEndOf="@id/downloadsHeaderTV"/>
+
+    <TextView
+        android:id="@+id/wikiHeaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Wiki: "
+        app:layout_constraintTop_toBottomOf="@id/downloadsHeaderTV"
+        app:layout_constraintStart_toStartOf="@id/downloadsHeaderTV"/>
+
+    <TextView
+        android:id="@+id/wikiTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Wiki: "
+        app:layout_constraintTop_toTopOf="@id/wikiHeaderTV"
+        app:layout_constraintStart_toEndOf="@id/wikiHeaderTV"/>
+
+    <TextView
+        android:id="@+id/pagesHeaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Pages: "
+        app:layout_constraintTop_toBottomOf="@id/wikiHeaderTV"
+        app:layout_constraintStart_toStartOf="@id/wikiHeaderTV"/>
+
+    <TextView
+        android:id="@+id/pagesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Has Pages: "
+        app:layout_constraintTop_toTopOf="@id/pagesHeaderTV"
+        app:layout_constraintStart_toEndOf="@id/pagesHeaderTV"/>
+
+    <TextView
+        android:id="@+id/forksHeaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Forks Count: "
+        app:layout_constraintTop_toBottomOf="@id/pagesHeaderTV"
+        app:layout_constraintStart_toStartOf="@id/pagesHeaderTV"/>
+
+    <TextView
+        android:id="@+id/forksTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Forks Count: "
+        app:layout_constraintTop_toTopOf="@id/forksHeaderTV"
+        app:layout_constraintStart_toEndOf="@id/forksHeaderTV"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
