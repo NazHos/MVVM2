@@ -1,16 +1,18 @@
 package com.tae.techassessment.app
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.tae.techassessment.MainActivity
 import com.tae.techassessment.databinding.AdapterPeopleBinding
 import com.tae.techassessment.domain.PeopleModel
 
-class PeopleAdapter : RecyclerView.Adapter<MainViewHolder>() {
+class PeopleAdapter(var clickListener: MainViewHolder.OnItemClickListener) : RecyclerView.Adapter<MainViewHolder>() {
 
     var peopleList = mutableListOf<PeopleModel>()
-
     fun setPeople(peoples: List<PeopleModel>) {
         this.peopleList = peoples.toMutableList()
         notifyDataSetChanged()
@@ -24,10 +26,7 @@ class PeopleAdapter : RecyclerView.Adapter<MainViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-
-        val people = peopleList[position]
-        holder.binding.name.text = people.name
-        Glide.with(holder.itemView.context).load(people.owner.avatar_url).into(holder.binding.imageview)
+        holder.initialize(peopleList[position], clickListener)
     }
 
     override fun getItemCount(): Int {
@@ -36,5 +35,18 @@ class PeopleAdapter : RecyclerView.Adapter<MainViewHolder>() {
 }
 
 class MainViewHolder(val binding: AdapterPeopleBinding) : RecyclerView.ViewHolder(binding.root) {
+
+    fun initialize(people: PeopleModel, action: OnItemClickListener) {
+        binding.name.text = people.name
+        Glide.with(itemView.context).load(people.owner.avatar_url).into(binding.imageview)
+        itemView.setOnClickListener{
+            action.onItemClick(people, adapterPosition)
+        }
+
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(peoples : PeopleModel, position: Int)
+    }
 
 }
